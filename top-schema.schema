@@ -1,0 +1,49 @@
+{
+  "properties": {
+    "SAOVersion": {
+      "type": "string"
+    },
+    "PipelineVersion": {
+      "type": "string"
+    },
+    "Name": {
+      "type": "string"
+    },
+    "ID": {
+      "type": "string"
+    },
+    "SubSystemAppId": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "Owner": {
+      "type": "string"
+    },
+    "NotificationList": {
+      "type": "string"
+    },
+    "Components": {
+      "type": "array",
+      "items": { "$ref": "#/definitions/component"}
+    },
+    "Result": {
+      "type": "string"
+    }
+  },
+  "definitions" : {
+    "component" : {
+      "type": "object",
+      "required": [ "Type", "Location"],
+      "properties": {
+        "Type": {
+          "type": "string"
+        },
+        "Location": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}
